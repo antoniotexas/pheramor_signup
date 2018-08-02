@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">Pheramor sign up</string>
-
     <string name="email_address">Email address</string>
     <string name="button_next">Next</string>
+    <string name="password">Password</string>
+    <string name="user_name">Full Name</string>
+    <string name="zip_code">Zip Code</string>
+    <string name="user_height">Height</string>
 </resources>

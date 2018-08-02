@@ -20,7 +20,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".EmailActivity" />
-        <activity android:name=".PasswordActivity"></activity>
+        <activity android:name=".PasswordActivity" />
+        <activity android:name=".NameActivity" />
+        <activity android:name=".GenderDobActivity"></activity>
     </application>
 
 </manifest>
