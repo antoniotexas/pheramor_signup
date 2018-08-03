@@ -35,6 +35,6 @@ public class MainActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.navigation_bar);
         setTitle("Pheramor");
         setSupportActionBar(toolbar);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.dark_blue));
+        toolbar.setTitleTextColor(getResources().getColor(R.color.purple));
     }
 }

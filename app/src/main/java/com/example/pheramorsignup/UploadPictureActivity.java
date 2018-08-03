@@ -58,7 +58,7 @@ public class UploadPictureActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.navigation_bar);
         setTitle("Upload Profile Picture");
         setSupportActionBar(toolbar);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.dark_blue));
+        toolbar.setTitleTextColor(getResources().getColor(R.color.purple));
     }
 
     public void receivedData(){

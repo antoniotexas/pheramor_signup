@@ -7,8 +7,8 @@
         <shape android:shape="rectangle">
             <corners android:radius="90dp" />
             <gradient
-                android:startColor="@color/light_green"
-                android:endColor="@color/dark_blue"
+                android:startColor="@color/crimson"
+                android:endColor="@color/purple"
                 />
         </shape>
     </item>
