@@ -1,0 +1,369 @@
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pheramorsignup.RaceReligionActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="4dp"
+        android:theme="@style/SignUp.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/whitesmoke"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/navigation_bar"
+        app:layout_constraintVertical_bias="0.0"
+        tools:context="com.example.userregistration.NameActivity">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_picture"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:elevation="5dp"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                app:civ_border_color="#FFFFFFFF"
+                app:civ_border_width="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@android:drawable/btn_star_big_on" />
+
+            <!--User Full Name   -->
+            <TextView
+                android:id="@+id/name_holder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="112dp"
+                android:layout_marginLeft="112dp"
+                android:layout_marginTop="8dp"
+                android:text="Jose Ramos"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_picture" />
+
+            <!--Age-->
+            <TextView
+                android:id="@+id/dob_holder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="24"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/comma"
+                app:layout_constraintTop_toTopOf="@+id/comma" />
+
+
+            <!--  About Me Section    -->
+            <TextView
+                android:id="@+id/about_me_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="240dp"
+                android:background="@drawable/profile_style"
+                android:padding="5dp"
+                android:text="ABOUT ME"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Gender TextView -->
+            <TextView
+                android:id="@+id/gender_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:text="Gender"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/about_me_section" />
+
+            <!-- Gender TextView Holder-->
+            <TextView
+                android:id="@+id/gender_holder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:padding="2dp"
+                android:text="Male"
+                android:textColor="@color/dark_blue"
+                app:layout_constraintStart_toEndOf="@+id/gender_text_view"
+                app:layout_constraintTop_toTopOf="@+id/gender_text_view" />
+
+            <!-- Height TextView -->
+            <TextView
+                android:id="@+id/height_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="176dp"
+                android:layout_marginLeft="176dp"
+                android:text="@string/user_height"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/gender_holder" />
+
+            <!-- Height TextView Holder -->
+            <TextView
+                android:id="@+id/height_holder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="5'11''"
+                android:textColor="@color/dark_blue"
+                app:layout_constraintStart_toEndOf="@+id/height_text_view"
+                app:layout_constraintTop_toTopOf="@+id/height_text_view" />
+
+            <!-- Race TextView -->
+            <TextView
+                android:id="@+id/race_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/race"
+                app:layout_constraintStart_toStartOf="@+id/gender_text_view"
+                app:layout_constraintTop_toBottomOf="@+id/gender_text_view" />
+
+            <!-- Race TextView Place Holder -->
+            <TextView
+                android:id="@+id/race_holder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="@string/latino"
+                android:textColor="@color/dark_blue"
+                app:layout_constraintStart_toEndOf="@+id/race_text_view"
+                app:layout_constraintTop_toTopOf="@+id/race_text_view" />
+
+            <!-- Religion TextView -->
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Religion"
+                app:layout_constraintStart_toStartOf="@+id/height_text_view"
+                app:layout_constraintTop_toBottomOf="@+id/height_text_view" />
+
+            <!-- Religion TextView Place Holder -->
+            <TextView
+                android:id="@+id/religion_holder"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="@string/christian"
+                android:textColor="@color/dark_blue"
+                app:layout_constraintStart_toEndOf="@+id/textView7"
+                app:layout_constraintTop_toTopOf="@+id/textView7" />
+
+            <!-- My Interest TextView -->
+            <TextView
+                android:id="@+id/interest_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/profile_style"
+                android:padding="5dp"
+                android:text="@string/i_am_interest_in"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/race_text_view" />
+
+            <!-- My Interest TextView Place Holder-->
+            <TextView
+                android:id="@+id/gender_interest_holder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="@string/women"
+                android:textColor="@color/dark_blue"
+                app:layout_constraintStart_toEndOf="@+id/gender_type_text_view"
+                app:layout_constraintTop_toTopOf="@+id/gender_type_text_view" />
+
+            <!-- Age Range Place Holder -->
+            <TextView
+                android:id="@+id/age_range"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="Age between 18 and 30"
+                android:textColor="@color/dark_blue"
+                app:layout_constraintStart_toEndOf="@+id/age_text_view"
+                app:layout_constraintTop_toTopOf="@+id/age_text_view" />
+
+            <!-- Location TextView -->
+            <TextView
+                android:id="@+id/location_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/profile_style"
+                android:padding="5dp"
+                android:text="Zip Code"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/age_text_view" />
+
+            <!-- Location TextView Place Holder -->
+            <TextView
+                android:id="@+id/location_holder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Houston, TX 77086"
+                android:textColor="@color/dark_blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/location_text_view" />
+
+            <!-- Auth Information -->
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/profile_style"
+                android:padding="5dp"
+                android:text="AUTH INFO"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/location_holder" />
+
+            <!--Email TextView -->
+            <TextView
+                android:id="@+id/email_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="8dp"
+                android:text="Email"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+            <!--Email TextView Place Holder -->
+            <TextView
+                android:id="@+id/email_holder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="@string/antoniotexas_tamu_edu"
+                android:textColor="@color/dark_blue"
+                app:layout_constraintStart_toEndOf="@+id/email_text_view"
+                app:layout_constraintTop_toTopOf="@+id/email_text_view" />
+
+            <!--Password TextView -->
+            <TextView
+                android:id="@+id/password_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/password"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/email_text_view" />
+
+            <!--Password Place Holder -->
+            <TextView
+                android:id="@+id/password_holder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="@string/ramos_pherma11"
+                android:textColor="@color/dark_blue"
+                app:layout_constraintStart_toEndOf="@+id/password_text_view"
+                app:layout_constraintTop_toTopOf="@+id/password_text_view" />
+
+            <TextView
+                android:id="@+id/comma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=","
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/name_holder"
+                app:layout_constraintTop_toTopOf="@+id/name_holder" />
+
+            <TextView
+                android:id="@+id/gender_type_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/type"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/interest_text_view" />
+
+            <TextView
+                android:id="@+id/age_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Age "
+                app:layout_constraintStart_toStartOf="@+id/gender_type_text_view"
+                app:layout_constraintTop_toBottomOf="@+id/gender_type_text_view" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.constraint.ConstraintLayout>
+
+
+

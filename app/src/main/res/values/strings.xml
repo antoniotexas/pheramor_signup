@@ -1,9 +1,53 @@
 <resources>
-    <string name="app_name">Pheramor sign up</string>
+    <string name="app_name">User Registration</string>
     <string name="email_address">Email address</string>
     <string name="button_next">Next</string>
     <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
     <string name="user_name">Full Name</string>
     <string name="zip_code">Zip Code</string>
     <string name="user_height">Height</string>
+    <string name="gender">Gender</string>
+    <string name="dob">DOB</string>
+    <string name="race">Race</string>
+    <string name="latino">Latino</string>
+    <string name="christian">Christian</string>
+    <string name="i_am_interest_in">I AM INTEREST IN</string>
+    <string name="women">Women</string>
+    <string name="antoniotexas_tamu_edu">antoniotexas@tamu.edu</string>
+    <string name="ramos_pherma11">ramos_pherma11</string>
+    <string name="type">Type</string>
+    <string name="choose_picture">Choose Picture</string>
+
+    <string-array name="race_array">
+        <item>African</item>
+        <item>African American</item>
+        <item>Latino</item>
+        <item>South Asian</item>
+        <item>Arab</item>
+        <item>East Asian</item>
+        <item>Native American</item>
+        <item>White/Caucasian</item>
+        <item>N/A</item>
+    </string-array>
+
+    <string-array name="religion_array">
+        <item>Muslim</item>
+        <item>Atheist</item>
+        <item>Agnostic</item>
+        <item>Buddhist</item>
+        <item>Christian</item>
+        <item>Jewish</item>
+        <item>Sikh</item>
+        <item>Hindu</item>
+        <item>Baha'i</item>
+        <item>N/A</item>
+    </string-array>
+
+    <string-array name="gender_array">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+
 </resources>

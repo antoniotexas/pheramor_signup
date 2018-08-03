@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button signUpButn;
+    private Button signUpBtn;
     Toolbar toolbar;
 
     @Override
@@ -19,9 +19,9 @@ public class MainActivity extends AppCompatActivity {
 
         setToolbar();
 
-        signUpButn = findViewById(R.id.sign_up_btn);
+        signUpBtn = findViewById(R.id.sign_up_btn);
 
-        signUpButn.setOnClickListener(new View.OnClickListener() {
+        signUpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getBaseContext(), EmailActivity.class);

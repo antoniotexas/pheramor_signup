@@ -5,69 +5,74 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/whitesmoke"
-    tools:context="com.example.pheramorsignup.GenderDobActivity"
-    tools:layout_editor_absoluteY="25dp">
+    tools:context="com.example.pheramorsignup.RaceReligionActivity"
+    tools:layout_editor_absoluteY="81dp">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/navigation_bar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:elevation="4dp"
         android:theme="@style/SignUp.ActionBar"
+        android:elevation="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/gender_view"
+        android:id="@+id/race_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
-        android:text="@string/gender"
+        android:text="Race(Optional)"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/navigation_bar" />
 
     <Spinner
-        android:id="@+id/gender_spinner"
+        android:id="@+id/race_spinner"
         android:layout_width="match_parent"
-        android:layout_height="54dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginStart="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gender_view" />
-
-    <EditText
-        android:id="@+id/dob_field"
-        android:layout_width="336dp"
         android:layout_height="50dp"
         android:layout_marginEnd="24dp"
         android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/race_view" />
+
+    <TextView
+        android:id="@+id/religion_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
-        android:background="@drawable/edit_text_input_style"
-        android:hint="@string/dob"
-        android:clickable="true"
-        android:paddingLeft="15dp"
-        android:paddingRight="0dp"
-        android:textSize="16sp"
+        android:text="Religion(Optional)"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/race_spinner" />
+
+    <Spinner
+        android:id="@+id/religion_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gender_spinner" />
+        app:layout_constraintTop_toBottomOf="@+id/religion_view" />
 
     <Button
         android:id="@+id/next_button"
-        android:layout_width="336dp"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginEnd="24dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/button_next_style"
         android:text="@string/button_next"
-        android:textColor="@color/white"
-        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dob_field" />
+        app:layout_constraintTop_toBottomOf="@+id/religion_spinner" />
+
 
 </android.support.constraint.ConstraintLayout>

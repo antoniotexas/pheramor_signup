@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.pheramorsignup">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -22,7 +24,11 @@
         <activity android:name=".EmailActivity" />
         <activity android:name=".PasswordActivity" />
         <activity android:name=".NameActivity" />
-        <activity android:name=".GenderDobActivity"></activity>
+        <activity android:name=".GenderDobActivity" />
+        <activity android:name=".GenderInterestActivity" />
+        <activity android:name=".UploadPictureActivity" />
+        <activity android:name=".SummaryActivity" />
+        <activity android:name=".RaceReligionActivity"></activity>
     </application>
 
 </manifest>
