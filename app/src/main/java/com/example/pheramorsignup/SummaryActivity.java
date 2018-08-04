@@ -195,6 +195,7 @@ public class SummaryActivity extends AppCompatActivity {
                 int respond = connection.getResponseCode();
 
                 //Check for data in json array
+                //Data was sent to server as a json object
                 Log.d("Users Array",usersArray.toString());
 
                 // Checking for request status

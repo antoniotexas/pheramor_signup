@@ -64,7 +64,6 @@ public class EmailActivity extends AppCompatActivity {
                 Intent intent = new Intent(getBaseContext(), PasswordActivity.class);
                 intent.putExtra("email",email);
                 startActivity(intent);
-                finish();
             }
         });
     }

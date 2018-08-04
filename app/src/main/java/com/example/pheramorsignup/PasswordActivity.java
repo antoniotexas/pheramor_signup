@@ -76,7 +76,7 @@ public class PasswordActivity extends AppCompatActivity {
         boolean valid;
 
         password = passwordField.getText().toString();
-        final String PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[A-Z])(?=.*[@#$%^&+=!])(?=\\S+$).{4,}$";
+        final String PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[A-Z])(?=.*[@#$_%^&+=!])(?=\\S+$).{4,}$";
 
         pattern  = Pattern.compile(PASSWORD_PATTERN);
         matcher = pattern.matcher(password);

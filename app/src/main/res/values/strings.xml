@@ -34,7 +34,6 @@
     <string-array name="religion_array">
         <item>Muslim</item>
         <item>Atheist</item>
-        <item>Agnostic</item>
         <item>Buddhist</item>
         <item>Christian</item>
         <item>Jewish</item>
