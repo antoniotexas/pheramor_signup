@@ -74,7 +74,7 @@ public class NameActivity extends AppCompatActivity {
                 intent.putExtra("password",password);
                 intent.putExtra("name",name);
                 intent.putExtra("zip",zipCode);
-                intent.putExtra("height", foot + "'" + inches + "\"\"");
+                intent.putExtra("height", foot + "'" + inches + "\"");
                 startActivity(intent);
             }
         });
