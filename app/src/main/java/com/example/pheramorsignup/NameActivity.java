@@ -18,13 +18,16 @@ public class NameActivity extends AppCompatActivity {
     Toolbar toolbar;
     EditText nameField;
     EditText zipCodeField;
-    EditText heightField;
+    EditText footField;
+    EditText inchesField;
     Button nextBtn;
 
     String email;
     String password;
     String name;
     String zipCode;
+    String foot;
+    String inches;
     String height;
 
     @Override
@@ -35,7 +38,8 @@ public class NameActivity extends AppCompatActivity {
 
         nameField = findViewById(R.id.name_field);
         zipCodeField = findViewById(R.id.zip_code_field);
-        heightField = findViewById(R.id.height_field);
+        footField = findViewById(R.id.foot_field);
+        inchesField = findViewById(R.id.inches_field);
         nextBtn = findViewById(R.id.next_button);
 
         setToolbar();
@@ -70,7 +74,7 @@ public class NameActivity extends AppCompatActivity {
                 intent.putExtra("password",password);
                 intent.putExtra("name",name);
                 intent.putExtra("zip",zipCode);
-                intent.putExtra("height",height);
+                intent.putExtra("height", foot + "'" + inches + "\"\"");
                 startActivity(intent);
             }
         });
@@ -78,28 +82,36 @@ public class NameActivity extends AppCompatActivity {
 
     public boolean isFormValid(){
 
-        Pattern pattern;
-        Matcher matcher;
+        Pattern zipPattern;
+        Matcher zipMatcher;
         boolean valid = true;
 
         name    = nameField.getText().toString();
         zipCode = zipCodeField.getText().toString();
-        height  = heightField.getText().toString();
+        foot    = footField.getText().toString();
+        inches  = inchesField.getText().toString();
 
         final String ZIP_PATTERN = "^[0-9]{5}(?:-[0-9]{4})?$";
-        pattern  = Pattern.compile(ZIP_PATTERN);
-        matcher = pattern.matcher(zipCode);
+        zipPattern  = Pattern.compile(ZIP_PATTERN);
+        zipMatcher = zipPattern .matcher(zipCode);
 
         if(TextUtils.isEmpty(name)){
             nameField.setError("Should not be empty");
             valid = false;
         }
-        if(TextUtils.isEmpty(zipCode) || !matcher.matches() ){
+        if(TextUtils.isEmpty(zipCode) || !zipMatcher.matches() ){
             zipCodeField.setError("Not a valid zip code");
             valid = false;
         }
-        if(TextUtils.isEmpty(height)){
-            heightField.setError("Should not be empty");
+
+        //TODO: Check if the input is numeric and if the height is within the correct range.
+        // 1 foot = 12 inches
+        if(TextUtils.isEmpty(foot)){
+            footField.setError("Should not be empty");
+            valid = false;
+        }
+        if( TextUtils.isEmpty(inches)){
+            inchesField.setError("Should not be empty");
             valid = false;
         }
 
